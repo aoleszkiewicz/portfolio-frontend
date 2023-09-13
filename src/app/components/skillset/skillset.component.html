@@ -1,0 +1,25 @@
+<div class="skillset">
+  <h1 class="skillset-title">
+    {{ title }}
+  </h1>
+  <div
+    *ngIf="skillSet$ | async as skillSet; else loadingSpinner"
+    class="skillset-content">
+    <div *ngFor="let skill of skillSet" class="skillset-content-item">
+      <i [class]="skill.iconClass"></i>
+    </div>
+  </div>
+
+<!--  <div>-->
+<!--    <span>{{'all tools that i use:'}}</span>-->
+<!--    <div class="skillset-all-tools">-->
+<!--      <div class="skillset-all-tools-item">-->
+<!--        -->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <ng-template #loadingSpinner>
+    <app-loading-spinner></app-loading-spinner>
+  </ng-template>
+</div>

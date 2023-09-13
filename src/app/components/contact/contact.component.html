@@ -1,0 +1,16 @@
+<div class="contact-wrapper">
+  <div class='contact-stay-in-touch'>
+    <span>stay in touch!</span>
+  </div>
+  <div class='contact-form'>
+    <form [formGroup]='contactForm' (ngSubmit)='onSubmit()'>
+      <input formControlName='email' type="email" name='email' id='email' placeholder='📧 email' />
+      <input formControlName='message' type='text' name='message' id='message' placeholder='💬 topic' />
+      <button type='button' [disabled]='contactForm.valid' class='contact-form-submit-button'>
+        {{'send'}}
+      </button>
+    </form>
+
+<!--    {{contactForm.value | json}}-->
+  </div>
+</div>

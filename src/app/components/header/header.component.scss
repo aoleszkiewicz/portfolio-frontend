@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  height: 6vh;
+  background: black;
+  width: 100%;
+  position: relative;
+
+  &-floating {
+    position: fixed !important;
+    top: 0;
+    z-index: 100;
+  }
+
+  &-social-labels {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: white;
+      text-decoration: none;
+    }
+
+    i {
+      max-font-size: 2rem;
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<header
+  #header
+  class="header"
+  [class.header-floating]='floatingHeader$ | async'
+>
+  <div
+    class="header-social-labels"
+    *ngIf="socialLabels$ | async as socialLabels; else loadingSpinner">
+    <ng-container *ngFor="let socialLabel of socialLabels">
+      <a [href]="socialLabel.redirectUrl" target="_blank">
+        <i [class]="socialLabel.iconClass"></i>
+      </a>
+    </ng-container>
+  </div>
+  <ng-template #loadingSpinner>
+    <app-loading-spinner [spinnerSize]="'small'"></app-loading-spinner>
+  </ng-template>
+</header>

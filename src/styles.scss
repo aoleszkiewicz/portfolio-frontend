@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+  // Texts
+  --text-primary: #ffffff;
+  // Dark mode
+  --dark-primary: #1e1e1e;
+  --dark-secondary: #9c27b0;
+  --dark-accent-1: #757575;
+  --dark-accent-2: #e0e0e0;
+  --dark-accent-3: #ff9800;
+  // Light mode
+  --light-primary: #ffffff;
+  --light-secondary: #2196f3;
+  --light-accent-1: #f5f5f5;
+  --light-accent-2: #e0e0e0;
+  --light-accent-3: #ffc107;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}

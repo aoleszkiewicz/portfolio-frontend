@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { environment } from "../../../environments/environment.development";
 import { Project } from "../models/project";
 import { Skill } from "../models/skill";
 import { SocialLabel } from "../models/social-label";
@@ -9,19 +10,19 @@ import { SocialLabel } from "../models/social-label";
   providedIn: "root",
 })
 export class DataStorageService {
-  private url = `https://localhost:44318/data`;
-
   constructor(private _http: HttpClient) {}
 
+  private _url = `${environment.api.url}/data`;
+
   getSocialLabels(): Observable<SocialLabel[]> {
-    return this._http.get<SocialLabel[]>(`${this.url}/socialLabels`);
+    return this._http.get<SocialLabel[]>(`${this._url}/socialLabels`);
   }
 
   getSkillset(): Observable<Skill[]> {
-    return this._http.get<Skill[]>(`${this.url}/skillset`);
+    return this._http.get<Skill[]>(`${this._url}/skillset`);
   }
 
   getProjects(): Observable<Project[]> {
-    return this._http.get<Project[]>(`${this.url}/projectItems`);
+    return this._http.get<Project[]>(`${this._url}/projectItems`);
   }
 }
